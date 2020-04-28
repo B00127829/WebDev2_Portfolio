@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form Results</title>
+</head>
+<body>
+    
+    <div class="results">
+      <h5>Thank you for submitting your feedback it is greatly appreciated</h5>
+        
+      <h7>Your submitted data: </h7>
+        
+      <p><a href="GetInTouch.html">Return to the Get In Touch Page</a></p>
+        
+    </div>
+    
+    <div id="userdata"></div>
+    
+    
+     <script>
+        const dataList = document.getElementById("userdata")
+        new URLSearchParams(window.location.search).forEach((value, name) => {
+            dataList.append(`${name}: ${value}`)
+            dataList.append(document.createElement('br'))
+        })  
+    
+    </script> 
+    
+    
+</body> 
+</html>
+    
+    
+ 
